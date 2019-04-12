@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
     tempName = 'psjjsw'
+    @Output() Navpage = new EventEmitter<{Pagename: string}>();
+
+    onHeaderClick(nav){
+        this.Navpage.emit({
+          Pagename : nav
+        })
+    }
 }

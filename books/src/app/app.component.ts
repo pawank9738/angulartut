@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'books';
+  navPageSelected = 'Recipe'
+
+  onNaveSelected(nav){
+    //console.log(nav.Pagename)
+    this.navPageSelected = nav.Pagename
+  }
+
 }
